@@ -1,13 +1,36 @@
 package com.gruppomcr.cam.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * author: Costea Radu Gheorghe
  * date: 03/04/2016
  * */
-public class User {
+
+@Entity
+@Table(name="user")
+public class UserDTO {
 	
+	@Id
+	@Column(name="id")
+	private String id;
+	@Column(name="name")
 	private String name;
+	@Column(name="email")
 	private String email;
+	@Column(name="password")
 	private String password;
+	
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
